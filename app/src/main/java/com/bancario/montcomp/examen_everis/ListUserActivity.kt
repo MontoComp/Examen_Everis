@@ -41,10 +41,6 @@ class ListUserActivity : AppCompatActivity(), PostAdapter.PostHolder.OnAdapterLi
         //pb_loading.isIndeterminate=true
         //pb_loading.animate()
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 
     private  fun callService(){
@@ -66,44 +62,10 @@ class ListUserActivity : AppCompatActivity(), PostAdapter.PostHolder.OnAdapterLi
 
                         if( posts!= null){
 
-
-                            /*for(j in 0 until posts.size){
-                                val sublist = posts[j].comment
-
-                                for (i in 0 until sublist.size) {
-
-                                    var jsonusername =sublist[i].username
-                                    /*var jsontitle =
-                                    JSONObject(mylistArray.getString(i)).get("title").toString()
-                                var jsonmydescription =
-                                    JSONObject(mylistArray.getString(i)).get("description")
-                                        .toString()*/
-                                    Toast.makeText(
-                                        this@ListUserActivity,
-                                        "El Usuario ${posts[j].username} tiene dentro de sus comentarios a :${jsonusername}",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                }
-                            }*/
                             //pb_loading.invalidate()
                             //pb_loading.visibility = View.GONE
                             adapter.updateList(posts)
 
-                            /*Glide.with(this@MainActivity).load(user.image).centerCrop().into(iv_profile)
-
-                            tv_fullname.text="${user.name} ${user.lastname}"
-
-                            tv_likes.text="${user.social.likes}"
-                            tv_posts.text="${user.social.posts}"
-                            tv_shares.text="${user.social.shares}"
-                            tv_friends.text="${user.social.friends}"
-
-                            tv_age.text="${user.age}"
-                            tv_mail.text="${user.email}"
-                            tv_location.text="${user.location}"
-                            tv_work.text="${user.occupation}"*/
-
-                            Toast.makeText(this@ListUserActivity,"${posts[0].comment}", Toast.LENGTH_LONG).show()
                         }
                     }else{
                         Toast.makeText(this@ListUserActivity,"Error ${response.code()}", Toast.LENGTH_LONG).show()
