@@ -6,313 +6,300 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
+    android:background="#276640"
     tools:showIn="@layout/activity_main">
 
-    <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_grade"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Nombre Completo"
+        android:textColor="#fff"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile">
+
+    </TextView>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#005320"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:foregroundGravity="center"
-        android:padding="20dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fullname"
+        android:background="@drawable/border_shape">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_profile"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/ic_grade"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Likes"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
 
 
-        <TextView
-            android:id="@+id/tv_fullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:textSize="24dp"
-            android:text="Nombre Completo"
-            android:layout_margin="10dp">
+                </TextView>
 
-        </TextView>
+                <TextView
+                    android:id="@+id/tv_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
 
+
+                </TextView>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="#005320"
+                android:layout_margin="3dp">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posts"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+
+                </TextView>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="#005320"
+                android:layout_margin="3dp">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shares"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_shares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+
+                </TextView>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="#005320"
+                android:layout_margin="3dp">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/border_shape">
-            <LinearLayout
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_person">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_age"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
+                android:layout_height="50dp"
                 android:gravity="center">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Likes"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv_likes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-
-                    </TextView>
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#005320"
-                    android:layout_margin="3dp">
-
-                </TextView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Posts"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv_posts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-
-                    </TextView>
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#005320"
-                    android:layout_margin="3dp">
-
-                </TextView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Shares"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv_shares"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-
-                    </TextView>
-
-                </LinearLayout>
-                <TextView
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="#005320"
-                    android:layout_margin="3dp">
-
-                </TextView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Friends"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv_friends"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:layout_margin="5dp">
-
-                    </TextView>
-
-                </LinearLayout>
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_person">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/tv_age"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center">
-
-                </TextView>
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_mail">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/tv_mail"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center">
-
-                </TextView>
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_location">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/tv_location"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center">
-
-                </TextView>
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_work">
-
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/tv_work"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center">
-
-                </TextView>
-
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_irfeed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ir al feed"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_margin="6dp"
-                android:padding="6dp">
-
             </TextView>
 
-            <TextView
-                android:id="@+id/tv_iramigos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ir a amigos"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_margin="6dp"
-                android:padding="6dp">
 
-            </TextView>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_mail">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+            </TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_location">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+            </TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_work">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_work"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_irfeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir al feed"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:padding="6dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_iramigos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir a amigos"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:padding="8dp">
+
+        </TextView>
 
     </LinearLayout>
 
-
-
-
-
-
-
-</ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

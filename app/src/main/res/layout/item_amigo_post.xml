@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="@drawable/border_card"
+        android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_amigo_list"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_grade"
+            app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_nombreamigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_amigo_list"
             android:text="Nombre Usuario"
             android:textSize="25dp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/iv_amigo_list"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_amigo_list"
+            app:layout_constraintTop_toTopOf="parent">
 
         </TextView>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>

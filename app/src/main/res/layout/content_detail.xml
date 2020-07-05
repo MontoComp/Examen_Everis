@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/item_detail"/>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -25,26 +25,33 @@
 
         <EditText
             android:id="@+id/et_micomentario"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Enviar mensaje"
-            android:textSize="20dp"
             android:paddingHorizontal="25dp"
             android:textColor="#000"
-            android:textColorHint="#000">
+            android:textColorHint="#000"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
         </EditText>
 
         <ImageView
             android:id="@+id/iv_send_comment"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_send">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_micomentario"
+            app:layout_constraintTop_toTopOf="parent">
 
         </ImageView>
 
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
