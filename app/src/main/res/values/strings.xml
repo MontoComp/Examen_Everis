@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Examen_Everis</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_list_user">ListUserActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_amigos">AmigosActivity</string>
 </resources>
