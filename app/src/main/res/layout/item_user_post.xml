@@ -98,7 +98,7 @@
                 android:layout_marginLeft="8dp" />
 
             <Button
-                android:id="@+id/btn_feed_item_comment"
+                android:id="@+id/btn_enviar_comentarios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_comment"

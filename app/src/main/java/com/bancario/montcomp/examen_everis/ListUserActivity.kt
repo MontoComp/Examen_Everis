@@ -15,6 +15,7 @@ import com.google.gson.Gson
 
 import kotlinx.android.synthetic.main.activity_list_user.*
 import kotlinx.android.synthetic.main.content_list_user.*
+import kotlinx.android.synthetic.main.item_user_post.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -40,6 +41,7 @@ class ListUserActivity : AppCompatActivity(), PostAdapter.PostHolder.OnAdapterLi
 
         //pb_loading.isIndeterminate=true
         //pb_loading.animate()
+
 
     }
 
